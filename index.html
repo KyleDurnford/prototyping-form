@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <header class="jumbotron jumbotron-fluid m-3 rounded-lg">
+    <header class="container jumbotron jumbotron-fluid rounded-lg mx-auto mt-2">
         <div class="container">
             <h1 class="display-6">Submit a Recipe</h1>
         </div>
@@ -34,31 +34,34 @@
                     </div>
                     <div class="form-group">
                         <label for="photo">Upload a Photo of the Finished Dish</label>
-                        <input type="file" id="photo" class="form-control-file">
+                        <input type="file" id="photo" class="form-control-file p-2 rounded-lg" style="background-color: #eee;">
+                        <small id="photoHelp" class="form-text text-muted">JPG only. Max size 3Mb</small>
                     </div>
                 </div>
                 <div class="m-3 p-2 bg-light rounded-lg col">
                     <h2 class="font-weight-bold">Recipe Information</h2>
                     <h3 class="h4 mt-4">Prep Time</h3>
+                    <p>How long does it take to prepare the recipe?</p>
                     <div class="form-row">
                         <div class="col">
                             <label for="prephr">Hours</label>
-                            <input type="number" class="form-control" id="prephr">
+                            <input type="number" class="form-control" id="prephr" placeholder="0">
                         </div>
                         <div class="col">
                             <label for="prepmin">Minutes</label>
-                            <input type="number" class="form-control" id="prepmin" min="0" max="59">
+                            <input type="number" class="form-control" id="prepmin" min="0" max="59" placeholder="0">
                         </div>
                     </div>
                     <h3 class="h4 mt-4">Cook Time</h3>
+                    <p>How long does it take to cook the recipe?</p>
                     <div class="form-row">
                         <div class="col">
                             <label for="cookhr">Hours</label>
-                            <input type="number" class="form-control" id="cookhr">
+                            <input type="number" class="form-control" id="cookhr" placeholder="0">
                         </div>
                         <div class="col">
                             <label for="cookmin">Minutes</label>
-                            <input type="number" class="form-control" id="cookmin" min="0" max="59">
+                            <input type="number" class="form-control" id="cookmin" min="0" max="59" placeholder="0">
                         </div>
                     </div>
                     <h3 class="h4 mt-4">Servings</h3>
@@ -84,7 +87,7 @@
                     <p>List all the ingredients necessary. The more descriptive the better!</p>
                     <div class="form-row">
                         <div class="col-10">
-                            <input type="text" class="form-control" name="ingredients" placeholder="1 Cup of Flour">
+                            <input type="text" class="form-control" name="ingredients" placeholder="1/4 Cup of Brown Sugar">
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-success add-ing">Add</button>
